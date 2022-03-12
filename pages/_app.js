@@ -12,7 +12,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'highlight.js/styles/darcula.css';
 import "react-toggle/style.css"
 
-export default ({Component, pageProps}) =>
+const MyAppComponent = ({Component, pageProps}) => (
   <ThemeProvider>
     <Component {...pageProps} />
   </ThemeProvider>
+);
+
+MyAppComponent.displayName = 'MyAppComponent';
+
+export default MyAppComponent;
